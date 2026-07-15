@@ -1,0 +1,980 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   CSS VARIABLES
+=========================== */
+
+:root{
+    --primary:#4f46e5;
+    --secondary:#06b6d4;
+    --success:#10b981;
+    --danger:#ef4444;
+
+    --text:#222;
+    --text-light:#666;
+
+    --white:#ffffff;
+
+    --bg:#f4f7fb;
+
+    --glass:rgba(255,255,255,.22);
+
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+}
+
+/* DARK MODE */
+
+body.dark{
+
+    --bg:#111827;
+
+    --text:#ffffff;
+
+    --text-light:#d1d5db;
+
+    --glass:rgba(255,255,255,.08);
+
+    --shadow:0 10px 25px rgba(0,0,0,.4);
+
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#eef2ff,#dbeafe,#f0fdfa);
+
+    color:var(--text);
+
+    transition:.4s;
+
+}
+
+body.dark{
+
+background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+
+}
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+section{
+
+padding:90px 8%;
+
+}
+
+h1,h2,h3{
+
+font-weight:700;
+
+}
+
+p{
+
+color:var(--text-light);
+
+line-height:1.8;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+backdrop-filter:blur(18px);
+
+background:rgba(255,255,255,.15);
+
+}
+
+body.dark header{
+
+background:rgba(0,0,0,.25);
+
+}
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:24px;
+
+font-weight:700;
+
+color:var(--primary);
+
+}
+
+.logo i{
+
+font-size:30px;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:28px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:10px 18px;
+
+border-radius:12px;
+
+transition:var(--transition);
+
+font-weight:500;
+
+}
+
+.nav-links a:hover{
+
+background:var(--primary);
+
+color:white;
+
+transform:translateY(-3px);
+
+}
+
+.right-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+#themeToggle{
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:50%;
+
+background:var(--primary);
+
+color:white;
+
+font-size:18px;
+
+transition:var(--transition);
+
+}
+
+#themeToggle:hover{
+
+transform:rotate(180deg);
+
+}
+
+.menu-btn{
+
+display:none;
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+
+url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+color:white;
+
+}
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+color:white;
+
+font-size:20px;
+
+margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:16px 40px;
+
+background:linear-gradient(45deg,var(--primary),var(--secondary));
+
+color:white;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow);
+
+}
+
+/* ===========================
+   COMMON CARDS
+=========================== */
+
+.card,
+.service-card,
+.dashboard-card{
+
+background:var(--glass);
+
+backdrop-filter:blur(20px);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+}
+
+.card:hover,
+.service-card:hover,
+.dashboard-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+
+section h2{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:50px;
+
+color:var(--primary);
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button{
+
+cursor:pointer;
+
+font-family:inherit;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:14px 30px;
+
+border:none;
+
+border-radius:12px;
+
+background:var(--primary);
+
+color:white;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:var(--secondary);
+
+}
+
+/* ===========================
+   RESPONSIVE NAVBAR
+=========================== */
+
+@media(max-width:900px){
+
+.nav-links{
+
+position:absolute;
+
+top:80px;
+
+left:-100%;
+
+width:100%;
+
+background:white;
+
+flex-direction:column;
+
+padding:25px;
+
+transition:.4s;
+
+}
+
+body.dark .nav-links{
+
+background:#1e293b;
+
+}
+
+.nav-links.active{
+
+left:0;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+}
+
+
+
+
+
+/* ===================================================
+   ABOUT SECTION
+=================================================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.about .card{
+    text-align:center;
+}
+
+.about .card i{
+    font-size:50px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.about .card h3{
+    margin-bottom:15px;
+}
+
+/* ===================================================
+   SERVICES
+=================================================== */
+
+.service-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    text-align:center;
+}
+
+.service-card i{
+    font-size:48px;
+    color:var(--secondary);
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    margin-bottom:12px;
+}
+
+/* ===================================================
+   DASHBOARD
+=================================================== */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.dashboard-card{
+    text-align:center;
+}
+
+.dashboard-card i{
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.dashboard-card h3{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+/* ===================================================
+   REGISTRATION FORM
+=================================================== */
+
+.register{
+    width:100%;
+}
+
+#customerForm{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-box label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-box input,
+.input-box select{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,.65);
+
+    transition:.3s;
+
+}
+
+body.dark .input-box input,
+body.dark .input-box select{
+
+    background:#374151;
+
+    color:white;
+
+}
+
+.input-box input:focus,
+.input-box select:focus{
+
+    border:2px solid var(--primary);
+
+}
+
+.form-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.form-buttons .btn{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.form-buttons .btn i{
+
+    margin-right:8px;
+
+}
+
+/* ===================================================
+   TABLE CONTROLS
+=================================================== */
+
+.table-controls{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.table-controls input{
+
+    flex:1;
+
+    min-width:250px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+}
+
+.table-controls select{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+}
+
+body.dark .table-controls input,
+body.dark .table-controls select{
+
+    background:#374151;
+
+    color:white;
+
+}
+
+/* ===================================================
+   CUSTOMER TABLE
+=================================================== */
+
+.table-container{
+
+    overflow-x:auto;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+thead th{
+
+    padding:18px;
+
+}
+
+tbody td{
+
+    padding:16px;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+body.dark tbody td{
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+tbody tr:hover{
+
+    background:rgba(79,70,229,.08);
+
+}
+
+table button{
+
+    padding:8px 14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin:2px;
+
+}
+
+.edit-btn{
+
+    background:var(--success);
+
+}
+
+.delete-btn{
+
+    background:var(--danger);
+
+}
+
+
+
+
+/* ===================================================
+   CONTACT SECTION
+=================================================== */
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.contact-card{
+    background:var(--glass);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+}
+
+.contact-card i{
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.contact-card h3{
+    margin-bottom:10px;
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+footer{
+    background:#111827;
+    color:#fff;
+    padding:50px 8% 30px;
+    text-align:center;
+}
+
+.footer-content h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.footer-content p{
+    color:#d1d5db;
+    margin-bottom:20px;
+}
+
+/* ===================================================
+   SOCIAL ICONS
+=================================================== */
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin:25px 0;
+    flex-wrap:wrap;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-6px) scale(1.1);
+    background:var(--secondary);
+}
+
+/* ===================================================
+   COPYRIGHT
+=================================================== */
+
+.copyright{
+    margin-top:25px;
+    font-size:14px;
+    opacity:0.8;
+}
+
+/* ===================================================
+   BACK TO TOP BUTTON
+=================================================== */
+
+#backToTop{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+    box-shadow:var(--shadow);
+    transition:0.3s;
+    z-index:1000;
+}
+
+#backToTop:hover{
+    background:var(--secondary);
+    transform:translateY(-5px);
+}
+
+/* ===================================================
+   SIMPLE ANIMATIONS
+=================================================== */
+
+.card,
+.service-card,
+.dashboard-card,
+.contact-card,
+.table-container,
+#customerForm{
+    animation:fadeUp .7s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

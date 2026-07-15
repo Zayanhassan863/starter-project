@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Registration Portal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-building"></i>
+<span>Prime Company</span>
+</div>
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+</li>
+
+<li>
+<a href="#about">
+<i class="fa-solid fa-circle-info"></i>
+About
+</a>
+</li>
+
+<li>
+<a href="#services">
+<i class="fa-solid fa-briefcase"></i>
+Services
+</a>
+</li>
+
+<li>
+<a href="#customers">
+<i class="fa-solid fa-users"></i>
+Customers
+</a>
+</li>
+
+<li>
+<a href="#contact">
+<i class="fa-solid fa-envelope"></i>
+Contact
+</a>
+</li>
+
+</ul>
+
+<div class="right-nav">
+
+<button id="themeToggle">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Customer Registration Portal</h1>
+
+<p>
+
+Welcome to Prime Company.
+
+Register as our customer and securely save your
+information in your personal browser database.
+
+</p>
+
+<a href="#register" class="hero-btn">
+
+Register Now
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+<h2>About Us</h2>
+
+<p>
+
+Prime Company is committed to delivering modern
+digital registration solutions for customers around
+the world.
+
+</p>
+
+<div class="about-grid">
+
+<div class="card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Secure</h3>
+<p>Your information stays safely stored.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-cloud"></i>
+<h3>Modern</h3>
+<p>Designed with modern web technologies.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-award"></i>
+<h3>Trusted</h3>
+<p>Thousands of satisfied customers.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="services">
+
+<h2>Our Services</h2>
+
+<div class="service-container">
+
+<div class="service-card">
+<i class="fa-solid fa-user-plus"></i>
+<h3>Customer Registration</h3>
+<p>Fast online registration.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-database"></i>
+<h3>Secure Records</h3>
+<p>Store customer information locally.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-chart-column"></i>
+<h3>Analytics</h3>
+<p>Dashboard statistics.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-headset"></i>
+<h3>Support</h3>
+<p>Professional customer support.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="dashboard">
+
+<h2>Dashboard</h2>
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3 id="totalCustomers">0</h3>
+
+<p>Total Customers</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-person"></i>
+
+<h3 id="maleCustomers">0</h3>
+
+<p>Male Customers</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-person-dress"></i>
+
+<h3 id="femaleCustomers">0</h3>
+
+<p>Female Customers</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-chart-simple"></i>
+
+<h3 id="averageAge">0</h3>
+
+<p>Average Age</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Registration form and customer table continue in the next part -->
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+
+
+
+<!-- ================= REGISTER ================= -->
+
+<section id="register" class="register">
+
+    <h2>Customer Registration</h2>
+
+    <form id="customerForm">
+
+        <div class="form-grid">
+
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-box">
+                <label>Age</label>
+                <input type="number" id="age" min="13" max="120" placeholder="Age" required>
+            </div>
+
+            <div class="input-box">
+                <label>Gender</label>
+
+                <select id="gender" required>
+
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+
+            <div class="input-box">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="+92xxxxxxxxxx" required>
+            </div>
+
+            <div class="input-box">
+                <label>Country</label>
+                <input type="text" id="country" placeholder="Country" required>
+            </div>
+
+            <div class="input-box">
+                <label>City</label>
+                <input type="text" id="city" placeholder="City" required>
+            </div>
+
+            <div class="input-box">
+                <label>Address</label>
+                <input type="text" id="address" placeholder="Address" required>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="input-box">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+
+        </div>
+
+        <div class="form-buttons">
+
+            <button type="submit" class="btn">
+
+                <i class="fa-solid fa-user-plus"></i>
+                Register Customer
+
+            </button>
+
+            <button type="reset" class="btn">
+
+                <i class="fa-solid fa-rotate"></i>
+                Reset Form
+
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- ================= CUSTOMER DATABASE ================= -->
+
+<section id="customers" class="customers">
+
+    <h2>Customer Database</h2>
+
+    <div class="table-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search customer by name...">
+
+        <select id="sortSelect">
+
+            <option value="default">Sort Customers</option>
+            <option value="name">Name (A-Z)</option>
+            <option value="age">Age</option>
+
+        </select>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Age</th>
+
+                    <th>Gender</th>
+
+                    <th>Email</th>
+
+                    <th>Phone</th>
+
+                    <th>Country</th>
+
+                    <th>City</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="customerTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Address</h3>
+            <p>123 Business Street, Your City</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+            <p>+92 300 1234567</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>support@primecompany.com</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>Prime Company</h3>
+
+        <p>
+            Thank you for choosing our customer registration portal.
+        </p>
+
+        <div class="social-icons">
+
+            <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://x.com" target="_blank">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Prime Company. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="backToTop" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+<form id="customerForm"></form>
+<input type="hidden" id="editIndex">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
